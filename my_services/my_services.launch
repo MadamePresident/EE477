@@ -1,0 +1,13 @@
+<launch>
+	<node name="server"
+	 pkg="my_services"
+		type="service_server.py" 
+		output="screen"
+	/>
+	<node name="client" 
+	 pkg="my_services"
+		type="service_client.py" 
+		args="$(arg input)"
+		output="screen"
+	/>
+</launch>
